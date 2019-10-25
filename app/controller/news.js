@@ -2,7 +2,7 @@
  * @Author: Tiny
  * @Date: 2019-10-23 16:08:40
  * @Last Modified by: tiny.jiao@aliyun.com
- * @Last Modified time: 2019-10-24 22:00:09
+ * @Last Modified time: 2019-10-25 14:13:38
  */
 'use strict';
 
@@ -15,15 +15,15 @@ class NewsController extends Controller {
     // const newsList = await ctx.service.news.list(page);
     const dataList = {
       list: [{
-          id: 1,
-          title: 'this is news 1',
-          url: '/news/1'
-        },
-        {
-          id: 2,
-          title: 'this is news 2',
-          url: '/news/2'
-        },
+        id: 1,
+        title: 'this is news 1',
+        url: '/news/1',
+      },
+      {
+        id: 2,
+        title: 'this is news 2',
+        url: '/news/2',
+      },
       ],
     };
     // await ctx.render('news/list.tpl', { list: newsList });

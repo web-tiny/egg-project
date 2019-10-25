@@ -16,7 +16,11 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1571816571305_1935';
 
   // add your middleware config here
-  config.middleware = [];
+  config.middleware = [ 'gzip' ];
+
+  config.gzip = {
+    threshold: 1024,
+  };
 
   // 添加 view 配置
   config.view = {
@@ -33,6 +37,17 @@ module.exports = appInfo => {
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
+    mysql: {
+      client: {
+        host: 'mysql.com',
+        port: '3306',
+        user: 'tiny.jiao@aliyun.com',
+        password: '4rCqUU2@GSf7Tiw',
+        datebase: 'tiny_database',
+      },
+      app: true,
+      agent: false,
+    },
   };
 
   return {
