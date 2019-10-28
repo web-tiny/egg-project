@@ -34,12 +34,11 @@ module.exports = appInfo => {
     pageSize: 5,
     serverUrl: 'https://hacker-news.firebaseio.com/v0',
   };
-  // add your user config here
-  const userConfig = {
-    // myAppName: 'egg',
+
+  config.mysql = {
     mysql: {
       client: {
-        host: 'mysql.com',
+        host: 'localhost',
         port: '3306',
         user: 'tiny.jiao@aliyun.com',
         password: '4rCqUU2@GSf7Tiw',
@@ -48,6 +47,18 @@ module.exports = appInfo => {
       app: true,
       agent: false,
     },
+  };
+
+  config.sequelize = {
+    dialect: 'mysql',
+    host: 'localhost',
+    port: 3306,
+    database: 'egg-sequelize-doc-default',
+  };
+
+  // add your user config here
+  const userConfig = {
+    // myAppName: 'egg',
   };
 
   return {
