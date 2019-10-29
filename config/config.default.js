@@ -40,8 +40,8 @@ module.exports = appInfo => {
       client: {
         host: 'localhost',
         port: '3306',
-        user: 'tiny.jiao@aliyun.com',
-        password: '4rCqUU2@GSf7Tiw',
+        user: 'root',
+        password: '123',
         datebase: 'tiny_database',
       },
       app: true,
@@ -52,13 +52,19 @@ module.exports = appInfo => {
   config.sequelize = {
     dialect: 'mysql',
     host: 'localhost',
-    port: 3306,
+    port: '3306',
+    user: 'root',
+    password: '123',
     database: 'egg-sequelize-doc-default',
   };
 
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
+    middleware: [ 'errorHandler' ],
+    errorHandler: {
+      match: '/api',
+    },
   };
 
   return {

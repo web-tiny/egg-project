@@ -2,7 +2,7 @@
  * @Author: Tiny
  * @Date: 2019-10-25 10:55:08
  * @Last Modified by: tiny.jiao@aliyun.com
- * @Last Modified time: 2019-10-25 11:17:41
+ * @Last Modified time: 2019-10-29 15:58:30
  */
 'use strict';
 
@@ -24,5 +24,5 @@ module.exports = options => {
     stream.end(body);
     ctx.body = stream;
     ctx.set('Content-Encoding', 'gzip');
-  }
-}
+  };
+};

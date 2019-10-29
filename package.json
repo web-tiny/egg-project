@@ -23,6 +23,7 @@
     "egg-mock": "^3.21.0",
     "eslint": "^5.13.0",
     "eslint-config-egg": "^7.1.0",
+    "factory-girl": "^5.0.4",
     "sequelize-cli": "^5.5.1"
   },
   "engines": {
@@ -37,7 +38,7 @@
     "test-local": "egg-bin test",
     "cov": "egg-bin cov",
     "lint": "eslint .",
-    "ci": "npm run lint && npm run cov",
+    "ci": "eslint . && NODE_ENV=test npx sequelize db:migrate && egg-bin cov",
     "autod": "autod"
   },
   "ci": {
