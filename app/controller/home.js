@@ -33,7 +33,7 @@ class HomeController extends Controller {
 
     // 设置响应内容和状态码
     ctx.body = {
-      id: res.id,
+      res,
     };
     ctx.status = 200;
   }

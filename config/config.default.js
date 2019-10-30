@@ -42,7 +42,7 @@ module.exports = appInfo => {
         port: '3306',
         user: 'root',
         password: '123',
-        datebase: 'tiny_database',
+        datebase: 'egg-sequelize-doc-default',
       },
       app: true,
       agent: false,
