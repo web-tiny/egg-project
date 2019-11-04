@@ -25,7 +25,8 @@ class UserController extends Controller {
     // const user = await this.service.user.find(ctx.params.id);
     const query = { limit: toInt(ctx.query.limit), offset: toInt(ctx.query.offset) };
     // ctx.body = user;
-    ctx.body = await ctx.model.User.findAll(query);
+    // ctx.body = await ctx.model.User.findAll(query);
+    ctx.body = await this.service.user.find();
     // ctx.body = {
     //   name: `hello ${ctx.params.id}`,
     //   user: `${ctx.params.name}`,

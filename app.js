@@ -14,4 +14,10 @@ exports.modules = app => {
     const mysqlConfig = await app.configCenter.fetch('mysql');
     app.datebase = app.mysql.createInstance(mysqlConfig);
   });
+  
+  if (app.config.env === 'loacal' || app.config.env === 'unittest') {
+  	app.beforeStart(async () => {
+  		await app.model.async({ force: true });
+  	});
+  }
 };

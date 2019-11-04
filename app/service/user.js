@@ -10,7 +10,21 @@ const Service = require('egg').Service;
 
 class UserService extends Service {
   async find() {
-    const user = await this.app.mysql.get('pets', { name: 'tiny' });
+  	const { ctx } = this;
+  	const data = {
+		name: 'test', 
+		age: 11, 
+		created_at: Date.now(), 
+		updated_at: Date.now()
+  	}
+  	// const insertData = await ctx.model.User.create(data);
+    const user = await ctx.model.User.findAll();
+    // const queryId = await ctx.model.User.findByPk(14);
+    // if (!queryId) {
+    // 	ctx.status = 404;
+    // 	return;
+    // }
+    // await queryId.destroy();
     return { user };
   }
 }
